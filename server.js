@@ -4,8 +4,9 @@ const {v4: uuidv4} = require('uuid');
 const app = express();
 const server = require('http').Server(app);
 
+//ejs for htm and JS
 app.set('view engine', 'ejs');
-
+app.use(express.static('public'));
 
 // main route generates uuid for new user and redirects to that room
 app.get('/', (req, res, next) => {
