@@ -31,6 +31,7 @@ navigator.mediaDevices.getUserMedia({
     call.on('stream', peerVideoStream => {
       addVideoStream(video, peerVideoStream)
     })
+    console.log("peer added to stream!")
   })
 
   socket.on('user-connected', (userId) => {
