@@ -66,3 +66,4 @@ const addVideoStream = (video, stream) => {
   //put video into the video-grid element
   videoGrid.appendChild(video);
 }
+

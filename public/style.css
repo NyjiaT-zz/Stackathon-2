@@ -41,12 +41,19 @@ video {
   background-color: #1c1e20;
   color: #d2d2d2;
   padding: 5px;
+  justify-content: space-between;
+}
+
+.main-controls-block {
+  display: flex;
 }
 
 .main-controls-button {
   display: flex;
   flex-direction: column;
-}
-.main-controls-block {
-  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 10px;
+  min-width: 80px;
+  cursor: pointer;
 }
