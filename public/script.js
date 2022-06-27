@@ -67,3 +67,32 @@ const addVideoStream = (video, stream) => {
   videoGrid.appendChild(video);
 }
 
+const mute = () => {
+  //get the current stream that you want to mute and the audio track
+  const enabled = userOneStream.getAudioTracks()[0].enabled;
+  //if the track is enabled then disable it (mute) and vice versa (unmute)
+  if (enabled) {
+    userOneStream.getAudioTracks()[0].enabled = false;
+    setUnmuteButton();
+  } else {
+    setMuteButton();
+    userOneStream.getAudioTracks()[0].enabled = true;
+  }
+}
+
+const setMuteButton = () => {
+  //target the mute button
+  const html = `
+    <i class="fas fa-microphone"></i>
+    <span>Mute</span>
+  `
+  document.querySelector('.main-mute-button').innerHTML = html;
+}
+
+const setUnmuteButton = () => {
+  const html = `
+    <i class="unmute fas fa-microphone-slash"></i>
+    <span>Unmute</span>
+  `
+  document.querySelector('.main-mute-button').innerHTML = html;
+}

@@ -57,3 +57,21 @@ video {
   min-width: 80px;
   cursor: pointer;
 }
+
+.unmute {
+  color:red;
+}
+
+.main-right {
+  display: flex;
+  flex-direction: column;
+  background-color: #242324;
+  border-left: 1px solid #3D3D42;
+}
+
+.main-header {
+  padding-top: 5px;
+  color: #F5F5F5;
+  text-align: center;
+}
+

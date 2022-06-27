@@ -26,7 +26,7 @@ app.get('/', (req, res, next) => {
     console.log(err)
   }
 })
-
+1
 app.get('/:room', (req, res, next) => {
   res.render('room', { roomId: req.params.room })
 })
