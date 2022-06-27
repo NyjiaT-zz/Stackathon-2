@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Video Chat</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/44d3f9ef23.js" crossorigin="anonymous"></script>
   <script src="/socket.io/socket.io.js" ></script>
   <script src="https://unpkg.com/peerjs@1.4.5/dist/peerjs.min.js"></script>
   <script>
@@ -13,8 +14,32 @@
   </script>
 </head>
 <body>
-  <div id="video-grid">
+  <div class="main">
+    <div class="main-left">
+        <div class="main-videos">
+          <div id="video-grid">
 
+          </div>
+        </div>
+        <div class="main-controls">
+          <div class="main-controls-block">
+              <div class="main-controls-button">
+                <i class="fa-solid fa-microphone"></i>
+                <span>Mute</span>
+              </div>
+              <div class="main-controls-button">
+                <i class="fa-solid fa-video"></i>
+                <span>Stop Video</span>
+              </div>
+          </div>
+
+        </div>
+    </div>
+    <div class="main-right">
+      <div class="main-header">
+        <h3>Chat</h3>
+      </div>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>

@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 #video-grid {
   display: flex;
   justify-content: center;
@@ -7,4 +12,41 @@ video {
   height:300px;
   width: 400px;
   object-fit: cover;
+}
+
+.main{
+    height: 100vh;
+    display: flex;
+}
+
+.main-left {
+  display: flex;
+  flex-direction: column;
+  flex: 0.8;
+}
+.main-right {
+  flex: 0.2;
+}
+
+.main-videos{
+  display: flex;
+  flex-grow: 1;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-controls {
+  display: flex;
+  background-color: #1c1e20;
+  color: #d2d2d2;
+  padding: 5px;
+}
+
+.main-controls-button {
+  display: flex;
+  flex-direction: column;
+}
+.main-controls-block {
+  display: flex;
 }
