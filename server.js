@@ -22,10 +22,13 @@ app.get('/:room', (req, res, next) => {
   res.render('room', { roomId: req.params.room })
 })
 
-//create socket connection
+//create socket connection when room isjoined
 io.on('connection', socket => {
-  socket.on('join-room', () => {
-    console.log('Joined!')
+  socket.on('join-room', (roomId) => {
+    //join specific room
+    socket.join(roomId);
+    //broadcast that a user has joined to the room
+    socket.to(roomId).emit('user-connected').broadcast;
   })
 })
 
